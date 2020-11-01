@@ -13,12 +13,109 @@
 
   /* Neutral */
   --VeryDarkBlue: hsl(234, 12%, 34%);
-  --GrayishBlue: hsl(229, 6%, 66%);
+  --GrayIshBlue: hsl(229, 6%, 66%);
   --VeryLightGray: hsl(0, 0%, 98%);
 }
 
 
 body {
+  background-color: var(--VeryLightGray);
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+}
+
+
+.wrapper {
+  margin: 60px 25px;
+}
+
+
+.main-top-card {
+  max-width: 339px;
+  text-align: center;
+  font-size: .8rem;
+}
+
+.main-top-card h1 {
+  color: var(--VeryDarkBlue);
+  font-size: 1.3rem;
+}
+
+.main-top-card span {
+  color: var(--GrayIshBlue);
+  font-family: 200;
+  font-weight: normal;
+}
+
+.main-top-card p {
+  font-size: .92rem;
+  color: var(--GrayIshBlue);
+  font-weight: 400;
+}
+
+
+
+.grid-layout {
+  margin: 60px 0;
+  display: grid;
+  row-gap: 22px;
+}
+
+
+
+.card {
+  box-shadow: 0 0 8px 6px  hsl(0, 0%, 92.2%);
+  border-radius: 8px;
+  padding: .5rem 27px;
+  font-size: .81rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before { 
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .3rem;
+  top: 0;
+  left: 0;
+}
+
+
+.card-one::before { 
+  background-color: var(--Cyan);
+}
+
+.card-two::before { 
+  background-color: var(--Red);
+}
+
+.card-three::before { 
+  background-color: var(--Orange);
+}
+
+.card-four::before { 
+  background-color: var(--Blue);
+}
+
+
+.card h2 {
+  margin-bottom: 0;
+  color: var(--VeryDarkBlue);
+}
+
+.card p {
+  color: var(--GrayIshBlue);
+  font-weight: 400;
+}
+
+.card__figure{
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card__image {
+  padding: 20px 0;
+  width: 20%;
 }
