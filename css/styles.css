@@ -25,13 +25,13 @@ body {
 }
 
 
-.wrapper {
-  margin: 60px 25px;
+.wrapper { 
+  margin: 30px  25px;
 }
-
 
 .main-top-card {
   max-width: 339px;
+  margin: 0 auto;
   text-align: center;
   font-size: .8rem;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .main-top-card p {
-  font-size: .92rem;
+  font-size: .94rem;
   color: var(--GrayIshBlue);
   font-weight: 400;
 }
@@ -58,15 +58,17 @@ body {
 .grid-layout {
   margin: 60px 0;
   display: grid;
-  row-gap: 22px;
+  row-gap: 24px;
 }
 
 
 
 .card {
+  max-width: 342px;
+  margin: 0 auto;
   box-shadow: 0 0 8px 6px  hsl(0, 0%, 92.2%);
   border-radius: 8px;
-  padding: .5rem 27px;
+  padding: 8px 27px;
   font-size: .81rem;
   position: relative;
   overflow: hidden;
@@ -117,5 +119,70 @@ body {
 
 .card__image {
   padding: 20px 0;
-  width: 20%;
+  max-width: 20%;
+}
+
+
+
+@media screen and (min-width: 580px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    column-gap: 24px;
+  }
+
+  .main-top-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .main-top-card p {
+    font-size: 1rem;
+  }
+
+
+  .main-top-card {
+    max-width: 540px;
+  }
+
+  .main-top-card span {
+    display: block;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: 1fr 342px 1fr;
+    grid-template-rows:  1px repeat(4, 1fr);
+  }
+
+  .main-top-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .card-one { 
+    grid-row: 3 / 5;
+    justify-self: end;
+  }
+
+  .card-two { 
+    grid-row: 2 /4;
+  }
+
+  .card-three { 
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+  }
+ 
+  .card-four { 
+    grid-row: 3 / 5;
+  }
+
+
+
 }
